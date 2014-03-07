@@ -82,7 +82,6 @@
         </dependency>
 
 
-
         <!-- Adicional Deps (From Students) -->
 
         <!-- LOMBOK -->
@@ -123,6 +122,18 @@
         </dependency>
 
     </dependencies>
+
+
+    <repositories>
+        <repository>
+            <id>jboss</id>
+            <url>http://repository.jboss.com/maven</url>
+        </repository>
+        <repository>
+            <id>java.net</id>
+            <url>http://download.java.net/maven/2/</url>
+        </repository>
+    </repositories>
 
 
 </project>
