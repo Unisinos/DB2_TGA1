@@ -37,5 +37,4 @@ public class Loja extends AbstractEntity<Long> {
     @Column(nullable = false)
     private Empresa empresa;
 
-
 }

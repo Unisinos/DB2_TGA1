@@ -17,7 +17,6 @@ public class Departamento extends AbstractEntity<Long> {
     @Setter
     private String nome;
 
-
     @Getter
     @Setter
     @OneToMany(mappedBy = "codigoDepartamento")

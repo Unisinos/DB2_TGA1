@@ -31,5 +31,4 @@ abstract public class AbstractEntity<K extends Object & Serializable> implements
     @GeneratedValue(strategy = GenerationType.AUTO)
     private K Id;
 
-
 }

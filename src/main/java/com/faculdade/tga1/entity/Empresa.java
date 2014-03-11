@@ -37,5 +37,4 @@ public class Empresa extends AbstractEntity<Long> {
     @Column(nullable = false)
     private Holding holder;
 
-
 }

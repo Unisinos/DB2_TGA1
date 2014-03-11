@@ -20,6 +20,8 @@ public class Holding extends AbstractEntity<Long> {
     @Setter
     private String nome;
 
+    @Getter
+    @Setter
     @OneToMany(mappedBy = "codigoHolding", cascade = CascadeType.ALL)
     private List<Empresa> empresas;
 
