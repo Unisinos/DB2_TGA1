@@ -27,13 +27,12 @@ public class Empresa extends AbstractEntity<Long> {
 
     @Getter
     @Setter
-    @OneToMany(mappedBy = "codigoEmpresa", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "empresa", cascade = CascadeType.ALL)
     private List<Loja> lojas;
 
     @Getter
     @Setter
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "codigoHolding")
     private Holding holder;
 
 }

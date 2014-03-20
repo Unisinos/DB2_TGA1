@@ -21,7 +21,7 @@ public class Tamanho extends AbstractEntity<Long> {
 
     @Getter
     @Setter
-    @OneToMany(mappedBy = "codigoTamanho", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "tamanho", cascade = CascadeType.ALL)
     private List<GradeItem> gradeItem;
 
 }

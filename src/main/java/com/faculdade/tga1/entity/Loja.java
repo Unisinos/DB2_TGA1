@@ -27,13 +27,12 @@ public class Loja extends AbstractEntity<Long> {
 
     @Getter
     @Setter
-    @OneToMany(mappedBy = "codigoLoja", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "loja", cascade = CascadeType.ALL)
     private List<Departamento> departamentos;
 
     @Getter
     @Setter
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "codigoEmpresa")
     private Empresa empresa;
 
 }

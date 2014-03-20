@@ -17,13 +17,12 @@ public class Categoria extends AbstractEntity<Long> {
     @Getter
     @Setter
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "codigoSecao")
     private Secao secao;
 
 
     @Getter
     @Setter
-    @OneToMany(mappedBy = "codigoProduto", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
     private List<Produto> produtos;
 
 }

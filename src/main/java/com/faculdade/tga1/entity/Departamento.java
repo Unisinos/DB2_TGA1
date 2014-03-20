@@ -19,19 +19,17 @@ public class Departamento extends AbstractEntity<Long> {
 
     @Getter
     @Setter
-    @OneToMany(mappedBy = "codigoDepartamento")
+    @OneToMany(mappedBy = "departamento")
     private List<Secao> secoes;
 
     @Getter
     @Setter
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "codigoEmpresa")
     private Empresa empresa;
 
     @Getter
     @Setter
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "codigoLoja")
     private Loja loja;
 
 }

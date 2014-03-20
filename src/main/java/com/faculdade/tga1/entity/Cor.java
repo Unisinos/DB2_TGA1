@@ -20,7 +20,7 @@ public class Cor extends AbstractEntity<Long> {
 
     @Getter
     @Setter
-    @OneToMany(mappedBy = "codigoCor", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "cor", cascade = CascadeType.ALL)
     private List<GradeItem> gradeItem;
 
 }

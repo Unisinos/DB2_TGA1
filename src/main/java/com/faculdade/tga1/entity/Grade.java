@@ -20,12 +20,12 @@ public class Grade extends AbstractEntity<Long> {
 
     @Getter
     @Setter
-    @OneToMany(mappedBy = "codigoGrade", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "grade", cascade = CascadeType.ALL)
     private List<GradeItem> gradesItens;
 
     @Getter
     @Setter
-    @OneToMany(mappedBy = "codigoGrade", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "grade", cascade = CascadeType.ALL)
     private List<Produto> produtos;
 
 

@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"codigoProduto", "codigoGradeItem", "codigoLoja", "codigoEmpresa"})})
-public class EstoqueGradeItem extends AbstractCleanEntity<Long> {
+public class EstoqueGradeItem extends AbstractEntity<Long> {
 
     @Getter
     @Setter
@@ -21,7 +21,6 @@ public class EstoqueGradeItem extends AbstractCleanEntity<Long> {
     @Setter
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "codigoProduto")
-    @Column(nullable = false)
     private Produto produto;
 
     @Getter
