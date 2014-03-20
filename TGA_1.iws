@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6aadbd50-3f0b-4046-8a42-6c6e02f86402" name="Default" comment="Ajustando entidades,&#10;Runner montado para testar">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Categoria.java" afterPath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Categoria.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Cor.java" afterPath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Cor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Departamento.java" afterPath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Departamento.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Empresa.java" afterPath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Empresa.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/EstoqueGradeItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/EstoqueGradeItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Grade.java" afterPath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Grade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/GradeItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/GradeItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Holding.java" afterPath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Holding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Loja.java" afterPath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Loja.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Produto.java" afterPath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Produto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Secao.java" afterPath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Secao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TGA_1.iws" afterPath="$PROJECT_DIR$/TGA_1.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Tamanho.java" afterPath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Tamanho.java" />
     </list>
     <list id="572a1ab5-580d-47b3-a789-f9ece4d82a3f" name="Rejected commit: Default" comment="Criando Entidades Basicas e Configurando direto o Projeto" />
     <ignored path="TGA_1.iws" />
@@ -93,10 +81,10 @@
       <file leaf-file-name="GradeItem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/GradeItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="525">
+            <state line="33" column="0" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="525">
               <folding>
                 <element signature="imports" expanded="false" />
-                <marker date="1395353928000" expanded="true" signature="258:277" placeholder="@{...}" />
+                <marker date="1395354530000" expanded="true" signature="379:398" placeholder="@{...}" />
               </folding>
             </state>
           </provider>
@@ -127,7 +115,7 @@
       <file leaf-file-name="Secao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Secao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="555">
+            <state line="15" column="13" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="555">
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
@@ -160,7 +148,7 @@
       <file leaf-file-name="Produto.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Produto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="38" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0" vertical-offset="173" max-vertical-offset="600">
+            <state line="29" column="38" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0" vertical-offset="173" max-vertical-offset="600">
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
@@ -829,7 +817,7 @@
       <workItem from="1394746765468" duration="2098000" />
       <workItem from="1394749440014" duration="2493000" />
       <workItem from="1395349887526" duration="389000" />
-      <workItem from="1395350288037" duration="2814000" />
+      <workItem from="1395350288037" duration="2826000" />
     </task>
     <task id="LOCAL-00001" summary="Criando Entidades Basicas e Configurando direto o Projeto">
       <created>1394162714676</created>
@@ -843,11 +831,15 @@
       <created>1395352313345</created>
       <updated>1395352313345</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ajustando entidades,&#10;Runner montado para testar">
+      <created>1395354531732</created>
+      <updated>1395354531732</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15956000" />
+    <option name="totallyTimeSpent" value="15968000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1216,10 +1208,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/GradeItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="525">
+        <state line="33" column="0" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="525">
           <folding>
             <element signature="imports" expanded="false" />
-            <marker date="1395353928000" expanded="true" signature="258:277" placeholder="@{...}" />
+            <marker date="1395354530000" expanded="true" signature="379:398" placeholder="@{...}" />
           </folding>
         </state>
       </provider>
@@ -1244,7 +1236,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Secao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="555">
+        <state line="15" column="13" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="555">
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1262,7 +1254,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/faculdade/tga1/entity/Produto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="38" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0" vertical-offset="173" max-vertical-offset="600">
+        <state line="29" column="38" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0" vertical-offset="173" max-vertical-offset="600">
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
