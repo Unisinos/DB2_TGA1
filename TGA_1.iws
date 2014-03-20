@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6aadbd50-3f0b-4046-8a42-6c6e02f86402" name="Default" comment="Ajustando entidades,&#10;Runner montado para testar">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/runner/RunnerApp.java" afterPath="$PROJECT_DIR$/src/main/java/com/faculdade/tga1/runner/RunnerApp.java" />
+    <list default="true" id="6aadbd50-3f0b-4046-8a42-6c6e02f86402" name="Default" comment="Ajuste no RUNNER e no Persistence para NAO usar o JTA, isto ocorre quando o EntityManager eh criado A MAO">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TGA_1.iws" afterPath="$PROJECT_DIR$/TGA_1.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
     </list>
     <list id="572a1ab5-580d-47b3-a789-f9ece4d82a3f" name="Rejected commit: Default" comment="Criando Entidades Basicas e Configurando direto o Projeto" />
     <ignored path="TGA_1.iws" />
@@ -732,7 +730,7 @@
       <workItem from="1394746765468" duration="2098000" />
       <workItem from="1394749440014" duration="2493000" />
       <workItem from="1395349887526" duration="389000" />
-      <workItem from="1395350288037" duration="3487000" />
+      <workItem from="1395350288037" duration="3514000" />
     </task>
     <task id="LOCAL-00001" summary="Criando Entidades Basicas e Configurando direto o Projeto">
       <created>1394162714676</created>
@@ -754,11 +752,15 @@
       <created>1395354545142</created>
       <updated>1395354545142</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ajuste no RUNNER e no Persistence para NAO usar o JTA, isto ocorre quando o EntityManager eh criado A MAO">
+      <created>1395355227063</created>
+      <updated>1395355227063</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16629000" />
+    <option name="totallyTimeSpent" value="16656000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -831,7 +833,8 @@
     <MESSAGE value="Criando Entidades Basicas e Configurando direto o Projeto" />
     <MESSAGE value="Ajustando entidades criadas com a anotação do Sequence na entidade.&#10;Anotado as classes que ainda estavam sem @Entity" />
     <MESSAGE value="Ajustando entidades,&#10;Runner montado para testar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustando entidades,&#10;Runner montado para testar" />
+    <MESSAGE value="Ajuste no RUNNER e no Persistence para NAO usar o JTA, isto ocorre quando o EntityManager eh criado A MAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste no RUNNER e no Persistence para NAO usar o JTA, isto ocorre quando o EntityManager eh criado A MAO" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
