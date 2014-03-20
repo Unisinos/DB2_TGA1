@@ -26,14 +26,12 @@ public class Departamento extends AbstractEntity<Long> {
     @Setter
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "codigoEmpresa")
-    @Column(nullable = false)
     private Empresa empresa;
 
     @Getter
     @Setter
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "codigoLoja")
-    @Column(nullable = false)
     private Loja loja;
 
 }

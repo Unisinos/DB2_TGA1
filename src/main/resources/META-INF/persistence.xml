@@ -5,18 +5,18 @@
         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
         version="2.1">
 
-    <persistence-unit name="tga-1" transaction-type="JTA">
+    <persistence-unit name="TGA1" transaction-type="JTA">
 
         <!-- Usando a especificação nova do HIBERNATE para JPA -->
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost/db2_tga1"/>
-            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.jdbc2.optional.MysqlDataSource" />
-            <property name="hibernate.connection.password" value="" />
-            <property name="hibernate.connection.username" value="root" />
-            <property name="hibernate.max_fetch_depth" value="2" />
-            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.max_fetch_depth" value="2"/>
+            <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.hbm2ddl.auto" value="create"/>
         </properties>
     </persistence-unit>

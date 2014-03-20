@@ -1,8 +1,39 @@
 package com.faculdade.tga1.entity;
 
-import javax.persistence.Entity;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
 
 @Entity
-public class Produto {
+@SequenceGenerator(name = "seq_id_Produto", sequenceName = "seq_id_Produto")
+public class Produto extends AbstractEntity<Long> {
+
+    @Getter
+    @Setter
+    private String nome;
+
+    @Getter
+    @Setter
+    private int estoqueAtual;
+
+    @Getter
+    @Setter
+    private int estoqueMinimo;
+
+
+    @Getter
+    @Setter
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "codigoCategoria")
+    private Categoria categoria;
+
+
+    @Getter
+    @Setter
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "codigoGrade")
+    private Grade grade;
+
 
 }

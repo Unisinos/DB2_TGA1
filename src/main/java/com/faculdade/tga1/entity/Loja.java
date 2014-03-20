@@ -34,7 +34,6 @@ public class Loja extends AbstractEntity<Long> {
     @Setter
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "codigoEmpresa")
-    @Column(nullable = false)
     private Empresa empresa;
 
 }
