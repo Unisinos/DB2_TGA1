@@ -16,7 +16,7 @@ public class RunnerApp {
         EntityManager em = emf.createEntityManager();
 
         Holding hl = new Holding();
-
+        hl.setNome("Holding SXL");
         em.getTransaction().begin();
         em.persist(hl);
         em.getTransaction().commit();
