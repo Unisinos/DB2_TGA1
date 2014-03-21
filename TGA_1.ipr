@@ -214,6 +214,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/antlr/antlr/2.7.7/antlr-2.7.7-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: com.db4o:db4o-full-java5:7.13-SNAPSHOT">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/db4o/db4o-full-java5/7.13-SNAPSHOT/db4o-full-java5-7.13-SNAPSHOT.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/db4o/db4o-full-java5/7.13-SNAPSHOT/db4o-full-java5-7.13-SNAPSHOT-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/db4o/db4o-full-java5/7.13-SNAPSHOT/db4o-full-java5-7.13-SNAPSHOT-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: commons-dbcp:commons-dbcp:1.2.2">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/commons-dbcp/commons-dbcp/1.2.2/commons-dbcp-1.2.2.jar!/" />

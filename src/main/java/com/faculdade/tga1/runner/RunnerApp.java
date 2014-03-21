@@ -1,5 +1,7 @@
 package com.faculdade.tga1.runner;
 
+import com.db4o.Db4o;
+import com.db4o.ObjectContainer;
 import com.faculdade.tga1.entity.*;
 
 import javax.persistence.EntityManager;
@@ -22,8 +24,7 @@ import java.util.ArrayList;
 public class RunnerApp {
 
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("TGA1");
-        EntityManager em = emf.createEntityManager();
+
 
         Holding hl = new Holding();
         hl.setNome("Holding SXL");
@@ -112,37 +113,46 @@ public class RunnerApp {
         egi.setProduto(produto);
 
 
-        em.getTransaction().begin();
-        em.persist(hl);
-        em.persist(sec);
-        em.persist(categoria);
-        em.persist(gr);
-        em.persist(cor);
-        em.persist(tamanho);
-        em.persist(gItem);
-        em.persist(egi);
-        em.getTransaction().commit();
+        if (args.length == 0) {
+            System.out.println(" >>> HELP ");
+            System.out.println("       - deve ser informado o parametro para qual metodo de persistencia deve ser usado ");
+            System.out.println("       - DB4o|Hibernate ");
+            return;
+        }
 
-//        ArrayList<Dependente> d = new ArrayList<Dependente>();
-//        Pessoa p = new Pessoa("Gilberto Müller");
-//        Dependente d1 = new Dependente("Jamile");
-//        Dependente d2 = new Dependente("Estéfane");
-//        d1.setPessoa(p);
-//        d2.setPessoa(p);
-//        d.add(d1);
-//        d.add(d2);
-//        p.setDependentes(d);
-//
-//        em.getTransaction().begin();
-//        em.persist(d1);
-//        em.persist(d2);
-//        em.persist(p);
-//        em.getTransaction().commit();
+        if ("DB4o".equals(args[0])) {
+            ObjectContainer db = Db4o.openFile("DB2-TGA1.yap");
+            db.set(hl);
+            db.set(sec);
+            db.set(categoria);
+            db.set(gr);
+            db.set(cor);
+            db.set(tamanho);
+            db.set(gItem);
+            db.set(egi);
 
-        // Observe o id 50L
-//        p = em.find(Pessoa.class, 50L);
-//        for(Dependente dependentes: p.getDependentes())
-//            System.out.println("Dependente: " + dependentes.getNome());
+            System.out.println(" >>> Entity: " + ((Holding) db.get(hl).next()).getNome());
+
+            db.close();
+
+        } else if ("Hibernate".equals(args[0])) {
+
+            EntityManagerFactory emf = Persistence.createEntityManagerFactory("TGA1");
+            EntityManager em = emf.createEntityManager();
+
+            em.getTransaction().begin();
+            em.persist(hl);
+            em.persist(sec);
+            em.persist(categoria);
+            em.persist(gr);
+            em.persist(cor);
+            em.persist(tamanho);
+            em.persist(gItem);
+            em.persist(egi);
+            em.getTransaction().commit();
+        }
+
+
     }
 
 }
