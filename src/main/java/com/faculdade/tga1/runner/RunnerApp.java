@@ -43,6 +43,7 @@ public class RunnerApp {
         lj.setEmpresa(emp);
         lj.setNroFuncionario(100);
 
+
         emp.setLojas(new ArrayList<Loja>());
         emp.getLojas().add(lj);
 

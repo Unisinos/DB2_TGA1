@@ -18,6 +18,8 @@ public class Loja extends AbstractEntity<Long> {
     @Setter
     private String nome;
 
+    @Getter
+    @Setter
     @Temporal(TemporalType.DATE)
     private Date dataAbertura;
 
@@ -29,6 +31,11 @@ public class Loja extends AbstractEntity<Long> {
     @Setter
     @OneToMany(mappedBy = "loja", cascade = CascadeType.ALL)
     private List<Departamento> departamentos;
+
+    @Getter
+    @Setter
+    @OneToMany(mappedBy = "loja", cascade = CascadeType.ALL)
+    private List<EstoqueGradeItem> estoqueGradeItem;
 
     @Getter
     @Setter
