@@ -29,7 +29,7 @@ abstract public class AbstractEntity<K extends Object & Serializable> implements
     @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private K Id;
+    private K id;
 
 
     @Override
