@@ -19,10 +19,8 @@ public class Categoria extends AbstractEntity<Long> {
     @ManyToOne(fetch = FetchType.LAZY)
     private Secao secao;
 
-
     @Getter
     @Setter
     @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
     private List<Produto> produtos;
-
 }

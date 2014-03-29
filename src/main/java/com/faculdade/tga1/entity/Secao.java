@@ -1,12 +1,15 @@
 package com.faculdade.tga1.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Created by iuriandreazza on 07/03/14.
@@ -33,5 +36,9 @@ public class Secao extends AbstractEntity<Long> {
     @Setter
     @ManyToOne(fetch = FetchType.LAZY)
     private Loja loja;
-
+    
+	@Getter
+	@Setter
+	@OneToMany(mappedBy="secao")
+	private List<Categoria> categoria;
 }
