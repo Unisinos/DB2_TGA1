@@ -1,6 +1,6 @@
 package com.faculdade.tga1.entity;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -40,5 +40,5 @@ public class Produto extends AbstractEntity<Long> {
     @Getter
     @Setter
     @OneToMany(mappedBy="produto")
-    private ArrayList<EstoqueGradeItem> estoqueGradeItem;
+    private List<EstoqueGradeItem> estoqueGradeItem;
 }
