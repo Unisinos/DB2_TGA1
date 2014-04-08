@@ -1,13 +1,14 @@
 package com.faculdade.tga1.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import java.io.Serializable;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
-import java.io.Serializable;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Created by iuriandreazza on 06/03/14.
@@ -30,7 +31,6 @@ abstract public class AbstractEntity<K extends Object & Serializable> implements
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private K id;
-
 
     @Override
     public int hashCode() {

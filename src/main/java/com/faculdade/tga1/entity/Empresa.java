@@ -1,10 +1,17 @@
 package com.faculdade.tga1.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.persistence.*;
-import java.util.List;
 
 /**
  * Created by iuriandreazza on 06/03/14.
@@ -34,5 +41,11 @@ public class Empresa extends AbstractEntity<Long> {
     @Setter
     @ManyToOne(fetch = FetchType.LAZY)
     private Holding holder;
+    
+	public void addLoja(Loja l) {
+		if(lojas == null)
+			lojas = new ArrayList<Loja>();
 
+		lojas.add(l);
+	}
 }

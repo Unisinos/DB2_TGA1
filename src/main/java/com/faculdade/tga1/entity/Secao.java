@@ -1,5 +1,6 @@
 package com.faculdade.tga1.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -41,4 +42,11 @@ public class Secao extends AbstractEntity<Long> {
 	@Setter
 	@OneToMany(mappedBy="secao")
 	private List<Categoria> categoria;
+	
+	public void addCategoria(Categoria c) {
+		if(categoria == null)
+			categoria = new ArrayList<Categoria>();
+
+		categoria.add(c);
+	}
 }

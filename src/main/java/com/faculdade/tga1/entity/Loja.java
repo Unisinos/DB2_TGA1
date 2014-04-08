@@ -1,11 +1,20 @@
 package com.faculdade.tga1.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-
-import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Created by iuriandreazza on 06/03/14.
@@ -41,5 +50,18 @@ public class Loja extends AbstractEntity<Long> {
     @Setter
     @ManyToOne(fetch = FetchType.LAZY)
     private Empresa empresa;
+    
+    public void addDepartamento(Departamento d) {
+		if(departamentos == null)
+			departamentos = new ArrayList<Departamento>();
 
+		departamentos.add(d);
+	}
+    
+	public void addEstoqueGradeItem(EstoqueGradeItem egi) {
+		if(estoqueGradeItem == null)
+			estoqueGradeItem = new ArrayList<EstoqueGradeItem>();
+
+		estoqueGradeItem.add(egi);
+	}
 }
