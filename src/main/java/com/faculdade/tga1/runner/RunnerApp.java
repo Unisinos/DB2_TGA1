@@ -1,15 +1,26 @@
 package com.faculdade.tga1.runner;
 
-import com.db4o.Db4o;
-import com.db4o.ObjectContainer;
-import com.faculdade.tga1.entity.*;
+import java.util.ArrayList;
+import java.util.Calendar;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import java.util.ArrayList;
-import java.util.Calendar;
+import com.db4o.Db4o;
+import com.db4o.ObjectContainer;
+import com.faculdade.tga1.entity.Categoria;
+import com.faculdade.tga1.entity.Cor;
+import com.faculdade.tga1.entity.Departamento;
+import com.faculdade.tga1.entity.Empresa;
+import com.faculdade.tga1.entity.EstoqueGradeItem;
+import com.faculdade.tga1.entity.Grade;
+import com.faculdade.tga1.entity.GradeItem;
+import com.faculdade.tga1.entity.Holding;
+import com.faculdade.tga1.entity.Loja;
+import com.faculdade.tga1.entity.Produto;
+import com.faculdade.tga1.entity.Secao;
+import com.faculdade.tga1.entity.Tamanho;
 
 /**
  * Trabalho DB2 - GA1
@@ -27,19 +38,28 @@ public class RunnerApp {
 
 	public static void main(String[] args) {
 
-
+		/**
+		 * HOLDING
+		 */
 		Holding hl = new Holding();
 		hl.setNome("Holding SXL");
 
+		/**
+		 * EMPRESA
+		 */
 		Empresa emp = new Empresa();
 		emp.setHolder(hl);
 		emp.setFantasia("Empresa 1");
 		emp.setLogradouro("Rua Teste");
 		emp.setRazaoSocial("Empresa JURIDICA X");
 
-		hl.setEmpresas(new ArrayList<Empresa>());
-		hl.getEmpresas().add(emp);
+//		hl.setEmpresas(new ArrayList<Empresa>());
+//		hl.getEmpresas().add(emp);
+		hl.addEmpresa(emp);
 
+		/**
+		 * LOJA
+		 */
 		Loja lj = new Loja();
 		lj.setNome("Loja Y");
 		lj.setEmpresa(emp);
@@ -47,9 +67,13 @@ public class RunnerApp {
 		lj.setDataAbertura(Calendar.getInstance().getTime());
 
 
-		emp.setLojas(new ArrayList<Loja>());
-		emp.getLojas().add(lj);
-
+//		emp.setLojas(new ArrayList<Loja>());
+//		emp.getLojas().add(lj);
+		emp.addLoja(lj);
+		
+		/**
+		 * DEPARTAMENTO
+		 */
 		Departamento dep = new Departamento();
 		dep.setEmpresa(emp);
 		dep.setLoja(lj);
@@ -60,54 +84,81 @@ public class RunnerApp {
 		dep1.setLoja(lj);
 		dep1.setNome("Departamento RH Teste");
 
-		lj.setDepartamentos(new ArrayList<Departamento>());
-		lj.getDepartamentos().add(dep);
-		lj.getDepartamentos().add(dep1);
+//		lj.setDepartamentos(new ArrayList<Departamento>());
+//		lj.getDepartamentos().add(dep);
+//		lj.getDepartamentos().add(dep1);
+		lj.addDepartamento(dep);
+		lj.addDepartamento(dep1);
 
+		/**
+		 * SEÇÃO
+		 */
 		Secao sec = new Secao();
 		sec.setNome("Secao T");
 		sec.setLoja(lj);
 		sec.setEmpresa(emp);
 		sec.setDepartamento(dep);
 
-		dep.setSecoes(new ArrayList<Secao>());
-		dep.getSecoes().add(sec);
+//		dep.setSecoes(new ArrayList<Secao>());
+//		dep.getSecoes().add(sec);
+		dep.addSecao(sec);
 
-
+		/**
+		 * CATEGORIA
+		 */
 		Categoria categoria = new Categoria();
 		categoria.setNome("Categoria");
 		categoria.setSecao(sec);
 
-		categoria.setProdutos(new ArrayList<Produto>());
-
+//		categoria.setProdutos(new ArrayList<Produto>());
+		
+		/**
+		 * PRODUTO
+		 */
 		Produto produto = new Produto();
 		produto.setCategoria(categoria);
 		produto.setNome("Produto");
 		produto.setEstoqueAtual(10);
 		produto.setEstoqueMinimo(2);
 
-		categoria.getProdutos().add(produto);
+//		categoria.getProdutos().add(produto);
+		categoria.addProduto(produto);
 
-
+		/**
+		 * 	COR
+		 */
 		Cor cor = new Cor();
 		cor.setNome("Cor 1");
 
+		/**
+		 * 	TAMANHO
+		 */
 		Tamanho tamanho = new Tamanho();
 		tamanho.setNome("GG");
 
+		/**
+		 * GRADE
+		 */
 		Grade gr = new Grade();
 		gr.setNome("Grade 1");
-		gr.setGradesItens(new ArrayList<GradeItem>());
-		gr.setProdutos(new ArrayList<Produto>());
-		gr.getProdutos().add(produto);
+//		gr.setGradesItens(new ArrayList<GradeItem>());
+//		gr.setProdutos(new ArrayList<Produto>());
+		gr.addProduto(produto);
+//		gr.getProdutos().add(produto);
 		produto.setGrade(gr);
 
+		/**
+		 * GRADEITEM
+		 */
 		GradeItem gItem = new GradeItem();
 		gItem.setNome("Nome Grade Item");
 		gItem.setCor(cor);
 		gItem.setTamanho(tamanho);
 		gItem.setGrade(gr);
 
+		/**
+		 * ESTOQUEGRADEITEM
+		 */
 		EstoqueGradeItem egi = new EstoqueGradeItem();
 		egi.setEmpresa(emp);
 		egi.setLoja(lj);
@@ -139,7 +190,7 @@ public class RunnerApp {
 
 			db.close();
 
-		} else if ("mysql".equals(args[0])) {
+		} else if ("mysql".equals(args[0])) {	
 
 			EntityManagerFactory emf = Persistence.createEntityManagerFactory("TGA1");
 			EntityManager em = emf.createEntityManager();
@@ -154,6 +205,10 @@ public class RunnerApp {
 			em.persist(gItem);
 			em.persist(egi);
 			em.getTransaction().commit();
+			
+			em.close();
+			System.exit(0);
+			
 		} else if ("pgsql".equals(args[0])) {
 
 			EntityManagerFactory emf = Persistence.createEntityManagerFactory("brinks");
@@ -169,9 +224,9 @@ public class RunnerApp {
 			em.persist(gItem);
 			em.persist(egi);
 			em.getTransaction().commit();
+			
+			em.close();
+			System.exit(0);
 		}
-
-
 	}
-
 }
