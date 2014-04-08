@@ -1,24 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence
-        xmlns="http://xmlns.jcp.org/xml/ns/persistence"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
-        version="2.1">
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
 
-    <persistence-unit name="TGA1">
+	<!-- MySQL -->
+	<persistence-unit name="TGA1">
 
-    <!-- Usando a especificação nova do HIBERNATE para JPA -->
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<!-- Usando a especificação nova do HIBERNATE para JPA -->
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <properties>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost/db2_tga1"/>
-            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
-            <property name="hibernate.connection.password" value=""/>
-            <property name="hibernate.connection.username" value="root"/>
-            <property name="hibernate.max_fetch_depth" value="2"/>
-            <property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
-        </properties>
-    </persistence-unit>
+		<properties>
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost/db2_tga1" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.password" value="" />
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.max_fetch_depth" value="2" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+	</persistence-unit>
+
+	<!-- PGSQL -->
+	<persistence-unit name="brinks" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>hibernateFirst.model.Holding</class>
+		<class>hibernateFirst.model.Empresa</class>
+		<class>hibernateFirst.model.Loja</class>
+		<class>hibernateFirst.model.Departamento</class>
+		<class>hibernateFirst.model.Secao</class>
+		<class>hibernateFirst.model.Categoria</class>
+		<class>hibernateFirst.model.Produto</class>
+		<class>hibernateFirst.model.EstoqueGradeItem</class>
+		<class>hibernateFirst.model.GradeItem</class>
+		<class>hibernateFirst.model.Grade</class>
+		<class>hibernateFirst.model.Cor</class>
+		<class>hibernateFirst.model.Tamanho</class>
+
+
+		<properties>
+			<property name="hibernate.connection.url" value="jdbc:postgresql://localhost/brinks" />
+			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+			<property name="hibernate.connection.password" value="bd2" />
+			<property name="hibernate.connection.username" value="bd2" />
+			<property name="hibernate.max_fetch_depth" value="2" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+	</persistence-unit>
 
 </persistence>
