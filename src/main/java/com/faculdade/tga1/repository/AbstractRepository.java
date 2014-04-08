@@ -1,7 +1,16 @@
 package com.faculdade.tga1.repository;
 
 /**
- * Created by iuriandreazza on 06/03/14.
+ * Trabalho - GA1
+ * Banco de Dados II - 2014/1
+ * Gilberto Irajá Müller
+ *
+ * Integrantes:
+ *      Paulo Grabin - plgrabin@gmail.com
+ *      Iuri Andreazza - iuri.andreazza@gmail.com
+ *      Talita Audibert - tali.audibert@gmail.com
+ *      Eduardo Pereira da Silva - eduardobursa@gmail.com
+ *
  */
-public class AbstractRepository {
+class AbstractRepository {
 }

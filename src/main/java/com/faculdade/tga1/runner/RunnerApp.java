@@ -23,8 +23,8 @@ import com.faculdade.tga1.entity.Tamanho;
 
 /**
  * Trabalho - GA1
- * Banco de Dados II
- * 2014/1
+ * Banco de Dados II - 2014/1
+ * Gilberto Irajá Müller
  *
  * Integrantes:
  *      Paulo Grabin - plgrabin@gmail.com
@@ -34,7 +34,7 @@ import com.faculdade.tga1.entity.Tamanho;
  *
  */
 /**
-	SQL testar os relacionamentos.
+	SQL para testar os relacionamentos.
 		
 	SELECT  h.id, h.nome,
 		e.id, e.razaosocial, e.fantasia, e.logradouro,
