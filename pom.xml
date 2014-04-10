@@ -140,7 +140,7 @@
     </dependencies>
 
 
-	<repositories>
+    <repositories>
 		<repository>
 			<id>jboss</id>
 			<url>http://repository.jboss.com/maven</url>
